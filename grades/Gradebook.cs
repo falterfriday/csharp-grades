@@ -18,7 +18,12 @@ namespace grades
         {
             grades.Add(grade);
         }
+        //grades access modifier is set to private as default
+        private List<float> grades; //hoisted above constructor (Gradebook)
 
-        List<float> grades; //hoisted above constructor (Gradebook)
+        public GradeStats ComputeStats()
+        {
+            return new GradeStats();
+        }
     }
 }
