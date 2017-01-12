@@ -12,6 +12,7 @@ namespace grades
         {
             Gradebook book = new Gradebook(); //constructor
             book.AddGrade(91);
+            book.AddGrade(85.5f); //appending f allows float to be treated as a double
         }
     }
 }
