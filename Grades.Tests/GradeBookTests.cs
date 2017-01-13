@@ -38,5 +38,19 @@ namespace Grades.Tests
             GradeStats result = book.ComputeStats();
             Assert.AreEqual(50, result.LowestGrade);
         }
+
+        [TestMethod]
+        public void ComputesAverageGrade()
+        {
+            Gradebook book = new Gradebook();
+            book.AddGrade(90);
+            book.AddGrade(80);
+            book.AddGrade(70);
+            book.AddGrade(60);
+            book.AddGrade(50.5f); //double treated as a signle floating point
+
+            GradeStats result = book.ComputeStats();
+            Assert.AreEqual(70.1, result.AverageGrade, 0.1);
+        }
     }
 }
