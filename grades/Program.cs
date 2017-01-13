@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace grades
 {
@@ -10,6 +12,10 @@ namespace grades
     {
         static void Main(string[] args)
         {
+
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.Speak("Hello! This is the grade book program.");
+
             Gradebook book = new Gradebook(); //constructor
             book.AddGrade(91);
             book.AddGrade(30);
@@ -35,6 +41,7 @@ namespace grades
             Console.WriteLine("Your average grade {0}", stats.AverageGrade);
             Console.WriteLine("Your highest grade {0}", stats.HighestGrade);
             Console.WriteLine("Your lowest grade {0}", stats.LowestGrade);
+            Console.ReadKey();
         }
     }
 }
