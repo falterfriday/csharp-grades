@@ -12,7 +12,6 @@ namespace grades
     {
         static void Main(string[] args)
         {
-
             SpeechSynthesizer synth = new SpeechSynthesizer();
             synth.Speak("Hello! This is the grade book program.");
 

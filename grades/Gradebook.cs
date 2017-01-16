@@ -47,5 +47,7 @@ namespace grades
             
             return stats;
         }
+
+        public string Name;
     }
 }
