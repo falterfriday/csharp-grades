@@ -85,5 +85,21 @@ namespace grades.Types
             name = name.ToUpper();
             Assert.AreEqual("PATRICK", name);
         }
+
+        [TestMethod]
+        public void UsingArrays()
+        {
+            float[] grades;
+            grades = new float[3];
+
+            AddGrades(grades);
+
+            Assert.AreEqual(89.5f, grades[1]);
+        }
+
+        private void AddGrades(float[] grades)
+        {
+            grades[1] = 89.5f;
+        }
     }
 }
